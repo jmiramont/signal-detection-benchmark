@@ -1,0 +1,26 @@
+# Basic benchmark configuration
+task: 'detection' # Could be 'detection', 'denoising' or 'misc'.
+
+# Total observation length.
+N: 256
+
+# Signal length within the total observation.
+#Nsub: 128
+
+# List of SNRs (in dB) to use in the benchmark.
+SNRin: [-5, 0, 5, 10]
+
+# If you want to use standard signals from the SignalBank class, just pass the ids.
+signal_ids: ['LinearChirp',]
+
+# Number of simulations.
+repetitions: 200
+
+# Level of verbosity 0 (just main messages) to 5 (all outputs).
+verbosity: 5
+
+# Enable parallel run with True or an integer indicating number of processes.
+# parallelize: False
+
+# Run benchmark using only new methods.
+# add_new_methods: True

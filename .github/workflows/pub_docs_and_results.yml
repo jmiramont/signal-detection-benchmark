@@ -1,0 +1,87 @@
+# This workflow runs the script publish_results.py.
+ 
+name: Publish docs and results
+
+on:
+  workflow_run: # Start if benchmarks are run in GitHub Actions,
+    workflows: [Run benchmarks]
+    types:
+      - completed
+      
+  workflow_dispatch: # Or if the user decides to run it,
+
+  push: # Or after a push in the main branch.
+    branches: [ main ]
+
+jobs:
+  # This workflow contains a single job called "publishing"
+  publishing:
+    permissions:
+      contents: write
+  # The type of runner that the job will run on
+    strategy:
+      matrix:
+#         os: ["ubuntu-latest", "macos-latest"]
+        os: ["ubuntu-latest"]
+        # python-version: ["3.7", "3.8", "3.9"]
+        python-version: ["3.10"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      # Install python
+      - name: Install Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      # Install Poetry and the dependencies
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install package # With docs dependencies.
+        run: poetry install --with docs
+
+      - name: Execute Test Script # Here we generate the report, plots and .csv files.
+        run: |
+         OWNER=$(echo ${GITHUB_REPOSITORY} | cut -d'/' -f1) NAME=$(echo ${GITHUB_REPOSITORY} | cut -d'/' -f2) .venv/bin/python3 publish_results.py
+
+      - name: Install pandoc
+        run: sudo apt install pandoc
+
+      - name: Move all .md reports to docs # To make html versions
+        run: | 
+          cp results/*.md docs/source
+          
+      - name: Build docs
+        run: |
+          cd docs
+          poetry run make clean
+          poetry run make html 
+      
+      - name: Move rest of files from results # (plots and .csv files)
+        run: |
+          # cd ..
+          cp -r results docs/build/html
+          > docs/build/html/.nojekyll
+        
+      - name: Deploy documentation to gh-pages branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: docs/build/html
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
