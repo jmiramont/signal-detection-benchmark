@@ -1,4 +1,4 @@
-# Benchmark Report [[Results .csv]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/all_results.csv) 
+# Benchmark Report [[Results .csv]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/results.csv) 
 
 ## Configuration
 
@@ -28,7 +28,7 @@ SNRin values:
 ## Mean results tables: 
 
 The results shown here are the average and 95\% Clopper-Pearson CI of                             the estimated detection power with Bonferroni correction.                             Best performances are **bolded**. 
-### Signal: LinearChirp[[View Plot]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/plot_LinearChirp.html)    [[Get .csv]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/results_LinearChirp.csv)
+### Signal: LinearChirp [[View Plot]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/plot_LinearChirp.html)    [[Get .csv]](https://jmiramont.github.io/signal-detection-benchmark/results/b2/results_LinearChirp.csv)
 |    | Method + Param                                                                                                    | SNRin=-5dB (average)   | SNRin=-5dB (CI)   | SNRin=0dB (average)   | SNRin=0dB (CI)   | SNRin=5dB (average)   | SNRin=5dB (CI)   | SNRin=10dB (average)   | SNRin=10dB (CI)   |
 |---:|:------------------------------------------------------------------------------------------------------------------|:-----------------------|:------------------|:----------------------|:-----------------|:----------------------|:-----------------|:-----------------------|:------------------|
 |  0 | monte_carlo_test{'statistic': 'Frs', 'pnorm': 2, 'rmax': 1.0, 'MC_reps': 199}                                     | 0.10                   | ['0.08', '0.11']  | 0.34                  | ['0.31', '0.37'] | 0.90                  | ['0.88', '0.92'] | **1.00**               | ['1.00', '1.00']  |
