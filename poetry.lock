@@ -1222,7 +1222,7 @@ tqdm = "^4.66.4"
 type = "git"
 url = "https://github.com/jmiramont/mcsm-benchs.git"
 reference = "dev"
-resolved_reference = "8b0819671694b4f86e2adf1da92824ca50b415d0"
+resolved_reference = "749d4be9662c594e987bc38beee622cad2311d17"
 
 [[package]]
 name = "mdit-py-plugins"
