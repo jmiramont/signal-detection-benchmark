@@ -46,7 +46,9 @@ if __name__ == "__main__":
     with open("config.yaml", "r") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     
-    # config['task'] = 'detection'
+    N = 1024
+    config['N'] = N
+    config['Nsub'] = N//2
 
     dictionary_of_methods = dict()
     dictionary_of_parameters = dict()

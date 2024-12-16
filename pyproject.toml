@@ -1,16 +1,29 @@
 [tool.poetry]
 package-mode = false
 description = ""
-authors = ["name <name@mymail.com>"]
+authors = ["Juan Manuel Miramont <jmiramon@univ-lille.com>"]
 readme = "README.md"
 packages = [{include = "src"}]
 
 # Add your own dependencies here using "poetry add [dependency_name]"
 [tool.poetry.dependencies]
+# src = { path = "src" }
 python = ">=3.10,<3.11"
 PyYAML = "^6.0"
-mcsm-benchs = {git = "https://github.com/jmiramont/mcsm-benchs.git", branch = "dev"}
+mcsm-benchs = "^0.1.0"
+# mcsm-benchs = "{git = "https://github.com/jmiramont/mcsm-benchs.git", branch = "dev"}"
 
+
+# Install R-based tools for reproducing the results with "poetry install --with rtools"
+ipykernel = "^6.29.5"
+librosa = "^0.10.2.post1"
+nbformat = "^5.10.4"
+[tool.poetry.group.rtools]
+optional = true
+
+[tool.poetry.group.rtools.dependencies]
+rpy2 = "3.5.2" 
+spatstat-interface = "^1.0.1"
 
 # Install Matlab-based tools with "poetry install --with matlab_tools"
 [tool.poetry.group.matlab_tools]

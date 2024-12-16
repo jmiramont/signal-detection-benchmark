@@ -2,7 +2,7 @@
 task: 'detection' # Could be 'detection', 'denoising' or 'misc'.
 
 # Total observation length.
-N: 256
+# N: 256 # This is fixed for each benchmark
 
 # Signal length within the total observation.
 #Nsub: 128
@@ -14,13 +14,13 @@ SNRin: [-5, 0, 5, 10]
 signal_ids: ['LinearChirp',]
 
 # Number of simulations.
-repetitions: 200
+repetitions: 2000
 
 # Level of verbosity 0 (just main messages) to 5 (all outputs).
 verbosity: 5
 
 # Enable parallel run with True or an integer indicating number of processes.
-# parallelize: False
+parallelize: False
 
 # Run benchmark using only new methods.
-# add_new_methods: True
+add_new_methods: False
