@@ -39,8 +39,6 @@ def compute_positions_and_bounds(pos):
 
         return u_r, v_r, b_u, b_v
 
-
-
 def get_white_noise_zeros(stft_params, complex_noise=False):
     """Get the zeros of the spectrogram of (real or complex) white Gaussian noise.
     If the noise generated is real, the zeros considered are those "far" from the time

@@ -65,7 +65,8 @@ if __name__ == "__main__":
     config['parameters'] = dictionary_of_parameters
 
 
-    #-----------------------------------------------------------------------------------# If you want to use your own noise generating function
+    #-----------------------------------------------------------------------------------
+    # # If you want to use your own noise generating function
     #-----------------------------------------------------------------------------------
     # config['complex_noise'] = noise_fun(N,) # Import this from src/utilities
 
