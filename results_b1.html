@@ -251,7 +251,7 @@
 <h1 id="results-b1--page-root">Benchmark Report <a class="reference external" href="#results-b1--page-root">[Results .csv]</a><a class="headerlink" href="#results-b1--page-root" title="Link to this heading">¶</a></h1>
 <section id="configuration">
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Link to this heading">¶</a></h2>
-<p>Length of signals: 256</p>
+<p>Length of signals: 512</p>
 <p>Repetitions: 2000</p>
 <p>SNRin values:
 -5,
@@ -294,134 +294,90 @@
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-right"><p>0</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs’, ‘pnorm’: 2, ‘rmax’: 0.5, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.05</p></td>
-<td class="text-left"><p>[‘0.03’, ‘0.06’]</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
-<td class="text-left"><p>0.14</p></td>
-<td class="text-left"><p>[‘0.12’, ‘0.17’]</p></td>
-<td class="text-left"><p>0.29</p></td>
-<td class="text-left"><p>[‘0.26’, ‘0.32’]</p></td>
+<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs’, ‘pnorm’: 2, ‘rmax’: 1.0, ‘MC_reps’: 199}</p></td>
+<td class="text-left"><p>0.08</p></td>
+<td class="text-left"><p>[‘0.06’, ‘0.10’]</p></td>
+<td class="text-left"><p>0.23</p></td>
+<td class="text-left"><p>[‘0.20’, ‘0.26’]</p></td>
+<td class="text-left"><p>0.80</p></td>
+<td class="text-left"><p>[‘0.78’, ‘0.83’]</p></td>
+<td class="text-left"><p><strong>1.00</strong></p></td>
+<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-odd"><td class="text-right"><p>1</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs_vs’, ‘pnorm’: 2, ‘rmax’: 0.5, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.04</p></td>
-<td class="text-left"><p>[‘0.03’, ‘0.06’]</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
-<td class="text-left"><p>0.14</p></td>
-<td class="text-left"><p>[‘0.12’, ‘0.16’]</p></td>
-<td class="text-left"><p>0.28</p></td>
-<td class="text-left"><p>[‘0.25’, ‘0.31’]</p></td>
+<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs_vs’, ‘pnorm’: 2, ‘rmax’: 1.0, ‘MC_reps’: 199}</p></td>
+<td class="text-left"><p>0.09</p></td>
+<td class="text-left"><p>[‘0.08’, ‘0.11’]</p></td>
+<td class="text-left"><p>0.42</p></td>
+<td class="text-left"><p>[‘0.39’, ‘0.45’]</p></td>
+<td class="text-left"><p>0.99</p></td>
+<td class="text-left"><p>[‘0.99’, ‘1.00’]</p></td>
+<td class="text-left"><p>1.00</p></td>
+<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-even"><td class="text-right"><p>2</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs’, ‘pnorm’: 2, ‘rmax’: 1.0, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.06</p></td>
-<td class="text-left"><p>[‘0.04’, ‘0.07’]</p></td>
-<td class="text-left"><p>0.17</p></td>
-<td class="text-left"><p>[‘0.14’, ‘0.19’]</p></td>
-<td class="text-left"><p>0.65</p></td>
-<td class="text-left"><p>[‘0.61’, ‘0.68’]</p></td>
+<td class="text-left"><p>global_mad_test{‘statistic’: ‘Frs’, ‘MC_reps’: 199}</p></td>
+<td class="text-left"><p>0.07</p></td>
+<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
+<td class="text-left"><p>0.23</p></td>
+<td class="text-left"><p>[‘0.20’, ‘0.25’]</p></td>
+<td class="text-left"><p>0.78</p></td>
+<td class="text-left"><p>[‘0.75’, ‘0.80’]</p></td>
 <td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-odd"><td class="text-right"><p>3</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs_vs’, ‘pnorm’: 2, ‘rmax’: 1.0, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
-<td class="text-left"><p>0.27</p></td>
-<td class="text-left"><p>[‘0.24’, ‘0.30’]</p></td>
-<td class="text-left"><p>0.94</p></td>
-<td class="text-left"><p>[‘0.92’, ‘0.95’]</p></td>
-<td class="text-left"><p><strong>1.00</strong></p></td>
+<td class="text-left"><p>global_mad_test{‘statistic’: ‘Frs_vs’, ‘MC_reps’: 199}</p></td>
+<td class="text-left"><p>0.08</p></td>
+<td class="text-left"><p>[‘0.07’, ‘0.10’]</p></td>
+<td class="text-left"><p>0.42</p></td>
+<td class="text-left"><p>[‘0.39’, ‘0.45’]</p></td>
+<td class="text-left"><p>1.00</p></td>
+<td class="text-left"><p>[‘0.99’, ‘1.00’]</p></td>
+<td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-even"><td class="text-right"><p>4</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs’, ‘pnorm’: 2, ‘rmax’: 2.0, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.06</p></td>
-<td class="text-left"><p>[‘0.05’, ‘0.08’]</p></td>
-<td class="text-left"><p>0.17</p></td>
-<td class="text-left"><p>[‘0.15’, ‘0.20’]</p></td>
-<td class="text-left"><p>0.65</p></td>
-<td class="text-left"><p>[‘0.62’, ‘0.68’]</p></td>
+<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’}</p></td>
+<td class="text-left"><p>0.08</p></td>
+<td class="text-left"><p>[‘0.06’, ‘0.10’]</p></td>
+<td class="text-left"><p>0.31</p></td>
+<td class="text-left"><p>[‘0.29’, ‘0.34’]</p></td>
+<td class="text-left"><p>0.99</p></td>
+<td class="text-left"><p>[‘0.98’, ‘1.00’]</p></td>
 <td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-odd"><td class="text-right"><p>5</p></td>
-<td class="text-left"><p>monte_carlo_test{‘statistic’: ‘Frs_vs’, ‘pnorm’: 2, ‘rmax’: 2.0, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
-<td class="text-left"><p>0.27</p></td>
-<td class="text-left"><p>[‘0.25’, ‘0.30’]</p></td>
-<td class="text-left"><p>0.94</p></td>
-<td class="text-left"><p>[‘0.92’, ‘0.95’]</p></td>
+<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’, ‘rmin’: 0.65, ‘rmax’: 1.05}</p></td>
+<td class="text-left"><p>0.11</p></td>
+<td class="text-left"><p>[‘0.09’, ‘0.13’]</p></td>
+<td class="text-left"><p><strong>0.49</strong></p></td>
+<td class="text-left"><p>[‘0.46’, ‘0.52’]</p></td>
+<td class="text-left"><p><strong>1.00</strong></p></td>
+<td class="text-left"><p>[‘0.99’, ‘1.00’]</p></td>
 <td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-even"><td class="text-right"><p>6</p></td>
-<td class="text-left"><p>global_mad_test{‘statistic’: ‘Frs’, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.06</p></td>
-<td class="text-left"><p>[‘0.04’, ‘0.07’]</p></td>
-<td class="text-left"><p>0.16</p></td>
-<td class="text-left"><p>[‘0.14’, ‘0.18’]</p></td>
-<td class="text-left"><p>0.65</p></td>
-<td class="text-left"><p>[‘0.61’, ‘0.68’]</p></td>
+<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’, ‘transform’: ‘asin(sqrt(.))’}</p></td>
+<td class="text-left"><p>0.07</p></td>
+<td class="text-left"><p>[‘0.06’, ‘0.09’]</p></td>
+<td class="text-left"><p>0.31</p></td>
+<td class="text-left"><p>[‘0.28’, ‘0.34’]</p></td>
+<td class="text-left"><p>0.99</p></td>
+<td class="text-left"><p>[‘0.99’, ‘1.00’]</p></td>
 <td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
 <tr class="row-odd"><td class="text-right"><p>7</p></td>
-<td class="text-left"><p>global_mad_test{‘statistic’: ‘Frs_vs’, ‘MC_reps’: 2499}</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.05’, ‘0.08’]</p></td>
-<td class="text-left"><p>0.27</p></td>
-<td class="text-left"><p>[‘0.24’, ‘0.30’]</p></td>
-<td class="text-left"><p>0.96</p></td>
-<td class="text-left"><p>[‘0.95’, ‘0.97’]</p></td>
-<td class="text-left"><p>1.00</p></td>
-<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>8</p></td>
-<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’}</p></td>
-<td class="text-left"><p>0.07</p></td>
-<td class="text-left"><p>[‘0.05’, ‘0.08’]</p></td>
-<td class="text-left"><p>0.20</p></td>
-<td class="text-left"><p>[‘0.17’, ‘0.22’]</p></td>
-<td class="text-left"><p>0.91</p></td>
-<td class="text-left"><p>[‘0.89’, ‘0.93’]</p></td>
-<td class="text-left"><p>1.00</p></td>
-<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>9</p></td>
-<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’, ‘rmin’: 0.65, ‘rmax’: 1.05}</p></td>
-<td class="text-left"><p><strong>0.09</strong></p></td>
-<td class="text-left"><p>[‘0.07’, ‘0.11’]</p></td>
-<td class="text-left"><p><strong>0.34</strong></p></td>
-<td class="text-left"><p>[‘0.31’, ‘0.37’]</p></td>
-<td class="text-left"><p><strong>0.97</strong></p></td>
-<td class="text-left"><p>[‘0.96’, ‘0.98’]</p></td>
-<td class="text-left"><p>1.00</p></td>
-<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>10</p></td>
-<td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’, ‘transform’: ‘asin(sqrt(.))’}</p></td>
-<td class="text-left"><p>0.06</p></td>
-<td class="text-left"><p>[‘0.05’, ‘0.08’]</p></td>
-<td class="text-left"><p>0.20</p></td>
-<td class="text-left"><p>[‘0.18’, ‘0.23’]</p></td>
-<td class="text-left"><p>0.91</p></td>
-<td class="text-left"><p>[‘0.88’, ‘0.92’]</p></td>
-<td class="text-left"><p>1.00</p></td>
-<td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>11</p></td>
 <td class="text-left"><p>global_rank_env_test{‘fun’: ‘Fest’, ‘correction’: ‘rs’, ‘rmin’: 0.65, ‘rmax’: 1.05, ‘transform’: ‘asin(sqrt(.))’}</p></td>
-<td class="text-left"><p>0.09</p></td>
-<td class="text-left"><p>[‘0.07’, ‘0.11’]</p></td>
-<td class="text-left"><p>0.34</p></td>
-<td class="text-left"><p>[‘0.31’, ‘0.37’]</p></td>
-<td class="text-left"><p>0.97</p></td>
-<td class="text-left"><p>[‘0.96’, ‘0.98’]</p></td>
+<td class="text-left"><p><strong>0.11</strong></p></td>
+<td class="text-left"><p>[‘0.10’, ‘0.13’]</p></td>
+<td class="text-left"><p>0.49</p></td>
+<td class="text-left"><p>[‘0.46’, ‘0.52’]</p></td>
+<td class="text-left"><p>1.00</p></td>
+<td class="text-left"><p>[‘0.99’, ‘1.00’]</p></td>
 <td class="text-left"><p>1.00</p></td>
 <td class="text-left"><p>[‘1.00’, ‘1.00’]</p></td>
 </tr>
