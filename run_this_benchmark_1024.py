@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
 
     #-----------------------------------------------------------------------------------
-    # # If you want to use your own noise generating function
+    # /home/juan/Nextcloud/Lille/reproduction_files/figure_6_results copy.ipynb# If you want to use your own noise generating function
     #-----------------------------------------------------------------------------------
     # config['complex_noise'] = noise_fun(N,) # Import this from src/utilities
 
